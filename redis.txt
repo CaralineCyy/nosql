@@ -1,0 +1,5 @@
+安全：
+(1)给redis服务器设置密码
+   CONFIG set requirepass "w3cschool.cc"
+   客户端连接密码验证
+   AUTH "w3cschool.cc"
