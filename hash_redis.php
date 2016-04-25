@@ -10,16 +10,16 @@
 
 
 	//hGet，hSet
-	$redis->delete('h');
-	$redis->hSet('h', 'key1', 'hello'); /* 1, 'key1' => 'hello' in the hash at "h" */
-	$val1 = $redis->hGet('h', 'key1'); /* returns "hello" */
+	$redis->delete('sm');
+	$redis->hSet('sm', 'key1', 'hello'); /* 1, 'key1' => 'hello' in the hash at "h" */
+	$val1 = $redis->hGet('sm', 'key1'); /* returns "hello" */
 	var_dump($val1);
 	echo '<br/>';
-	$redis->hSet('h', 'key1', 'plop'); /* 0, value was replaced. */
-	$val2 = $redis->hGet('h', 'key1'); /* returns "plop" */
+	$redis->hSet('sm', 'key1', 'plop'); /* 0, value was replaced. */
+	$val2 = $redis->hGet('sm', 'key1'); /* returns "plop" */
 	var_dump($val2);
 	echo '<br/>';
-
+    exit;
 
 	//hSetNx添加一个key到哈希数据中，如果这个key存在则返回false,否则返回true
 	$redis->delete('h');
