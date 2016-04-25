@@ -8,9 +8,9 @@
 	$redis->auth('111');
 
 	//zAdd添加一个或者多个元素(且元素值不能重复)返回的false????
-	$redis->zAdd('cyy123', 1, 'val1');
-	$redis->zAdd('cyy123', 0, 'val0');
-	$redis->zAdd('cyy123', 5, 'val5');
+	$redis->zAdd('cyy123111', 1, 'val1');
+	$redis->zAdd('cyy123111', 0, 'val0');
+	$redis->zAdd('cyy123111', 5, 'val5');
 	echo '<pre>';
 	var_dump($redis->zRange('cyy123', 0, -1,true));
 	echo '<pre>';
