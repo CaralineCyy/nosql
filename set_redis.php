@@ -7,9 +7,9 @@
 
 
 	//如果VALUE不存在于SET中，那么ADDED成功，返回TRUE，否则返回FALSE。
-	$redis->sAdd('key1' , 'member1'); /* TRUE, 'key1' => {'member1'} */
-	$redis->sAdd('key1' , 'member2'); /* TRUE, 'key1' => {'member1', 'member2'}*/
-	$redis->sAdd('key1' , 'member2'); /* FALSE, 'key1' => {'member1', 'member2'}*/
+	$redis->sAdd('key13' , 'member1'); /* TRUE, 'key1' => {'member1'} */
+	$redis->sAdd('key13' , 'member2'); /* TRUE, 'key1' => {'member1', 'member2'}*/
+	$redis->sAdd('key13' , 'member2'); /* FALSE, 'key1' => {'member1', 'member2'}*/
 
 
 	//sRem,sRomove从集合中移除指定的元素，成功则返回true,否则返回false
