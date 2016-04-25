@@ -9,30 +9,30 @@
 
 	//添加一个字符串值到LIST容器的顶部（左侧），如果KEY不存在，则创建一个LIST容器，如果KEY存在并且不是一个LIST容器，那么返回FLASE
 	////返回的是添加之后list容器的最新的长度
-	$redis->delete('key1');
-	$redis->lPush('key1', 'C'); // returns 1
-	$redis->lPush('key1', 'B'); // returns 2
-	$redis->lPush('key1', 'A'); // returns 3
+	$redis->delete('key6');
+	$redis->lPush('key6', 'C'); // returns 1
+	$redis->lPush('key6', 'B'); // returns 2
+	$redis->lPush('key6', 'A'); // returns 3
 	/* key1 now points to the following list: [ 'A', 'B', 'C' ] */
 
 
 
 	//添加一个字符串值到LIST容器的底部（右侧），如果KEY不存在，曾创建一个LIST容器，如果KEY存在并且不是一个LIST容器，那么返回FLASE。
 	//返回的是添加之后list容器的最新的长度
-	$redis->delete('key1');
-	$redis->rPush('key1', 'A'); // returns 1
-	$redis->rPush('key1', 'B'); // returns 2
-	$redis->rPush('key1', 'C'); // returns 3
+	$redis->delete('key2');
+	$redis->rPush('key2', 'A'); // returns 1
+	$redis->rPush('key2', 'B'); // returns 2
+	$redis->rPush('key2', 'C'); // returns 3
 	/* key1 now points to the following list: [ 'A', 'B', 'C' ] */
 
 
 	//返回LIST顶部（左侧）的VALUE，并且从LIST中把该VALUE弹出
 	//取得VALUE成功，返回TURE。如果是一个空LIST则返回FLASE。
-	$redis->delete('key1');
-	$redis->rPush('key1', 'A');
-	$redis->rPush('key1', 'B');
-	$redis->rPush('key1', 'C'); /* key1 => [ 'A', 'B', 'C' ] */
-	$redis->lPop('key1'); /* key1 => [ 'B', 'C' ] */
+	$redis->delete('key3');
+	$redis->rPush('key3', 'defwe');
+	$redis->rPush('key3', '3243');
+	$redis->rPush('key3', '3532'); /* key1 => [ 'A', 'B', 'C' ] */
+	$redis->lPop('key3'); /* key1 => [ 'B', 'C' ] */
 
 
 	//返回LIST底部（右侧）的VALUE，并且从LIST中把该VALUE弹出。
